@@ -17,16 +17,15 @@ function App() {
   return (
     <>
       <ParentContext>
-        <Layout>
-          <Router>
+        <Router>
+          <Layout>
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/sale' element={<SalePage />} />
             </Routes>
-          </Router>
-        </Layout>
+          </Layout>
+        </Router>
       </ParentContext>
-
     </>
   );
 }

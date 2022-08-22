@@ -4,7 +4,7 @@ import AuthContext from '../../../context/auth/AuthContext';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 
-const Layout = children => {
+const Layout = ({children}) => {
 
     const { isAuth, loading, getUser, token, user } = useContext(AuthContext);
     const navigate = useNavigate();
