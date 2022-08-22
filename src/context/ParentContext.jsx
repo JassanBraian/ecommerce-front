@@ -1,8 +1,14 @@
 import React from 'react';
+import AuthState from './auth/AuthState';
+import SaleProvider from './sale/SaleProvider';
 
 const ParentContext = ({ children }) => {
     return (
-        { children }
+        <AuthState>
+            
+                {children}
+            
+        </AuthState>
     );
 };
 
