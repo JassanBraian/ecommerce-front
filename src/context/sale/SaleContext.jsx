@@ -1,11 +1,5 @@
-import React from 'react';
+import { createContext } from 'react';
 
-const SaleContext = () => {
-    return (
-        <div>
-            
-        </div>
-    );
-};
+const SaleContext = createContext();
 
 export default SaleContext;
