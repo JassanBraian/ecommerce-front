@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 .vscode
+notes.txt
 
 db.json
 
