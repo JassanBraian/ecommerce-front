@@ -5,9 +5,9 @@ import SaleProvider from './sale/SaleProvider';
 const ParentContext = ({ children }) => {
     return (
         <AuthState>
-            
+            <SaleProvider>
                 {children}
-            
+            </SaleProvider>
         </AuthState>
     );
 };
