@@ -23,7 +23,7 @@ const ProductsProvider = ({ children }) => {
   const getProduct = async productId => {
     try {
         const res = await clientAxios.get(`http://localhost:4000/api/v1/product/${productId}`);
-        res && setValues({ ...values, currentProduct: res.data.currentProduct });
+        res && setValues({ ...values, currentProduct: res.data.product });
     } catch (error) {
         throw error;
     }

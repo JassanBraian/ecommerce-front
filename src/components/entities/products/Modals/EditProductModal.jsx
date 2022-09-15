@@ -32,7 +32,7 @@ const EditProductModal = ({ show, onHide }) => {
 
   const handleSubmit = e =>{
     e.preventDefault();
-  }
+  };
 
   return (<>
     <Modal
