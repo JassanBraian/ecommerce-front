@@ -1,0 +1,36 @@
+.add-product-modal{
+  text-align: center;
+}
+
+.add-product-modal-header{
+  display: flex;
+  justify-content: center !important;
+  background-color: rgb(183, 182, 182);
+}
+
+/* .add-product-modal input{
+  width: 80% !important;
+} */
+
+.add-product-modal-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-input{
+  width: 24rem !important;
+}
+
+.product-input-select{
+  width: 8rem !important;
+  font-weight: bold !important;
+}
+
+.product-input-select option{
+  text-align: start;
+}
+
+.add-product-modal-footer{
+  background-color: rgb(183, 182, 182) !important;
+}
