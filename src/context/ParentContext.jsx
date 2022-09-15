@@ -1,8 +1,10 @@
-import React from 'react';
+import ProductsProvider from "./products/ProductsProvider";
 
 const ParentContext = ({ children }) => {
     return (
+    <ProductsProvider>
         { children }
+    </ProductsProvider>
     );
 };
 
