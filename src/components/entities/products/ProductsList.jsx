@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap';
 import ProductsContext from '../../../context/products/ProductsContext';
 import '../../../css/entities/products/ProductsList.css';
 
-const ProductsList = ({ data, index, openEditModal }) => {
+const ProductsList = ({ data, index, openEditModal, openDeleteModal }) => {
 
   const { getProduct } = useContext(ProductsContext);
 
@@ -27,6 +27,7 @@ const ProductsList = ({ data, index, openEditModal }) => {
           variant='danger'
           onClick={()=>{
             getProduct(data._id);
+            openDeleteModal();
           }}>Eliminar</Button>
       </td>
     </tr>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useEffect, useContext } from 'react';
 import { Button, Table } from 'react-bootstrap';
 import AddProductModal from '../components/entities/products/Modals/AddProductModal';
+import DeleteProductModal from '../components/entities/products/Modals/DeleteProductModal';
 import EditProductModal from '../components/entities/products/Modals/EditProductModal';
 import ProductsList from '../components/entities/products/ProductsList';
 import ProductsContext from '../context/products/ProductsContext';
@@ -10,7 +11,8 @@ import '../css/entities/products/AdminProducts.css';
 const AdminProducts = () => {
 
   const [ showAddProductModal, setShowAddProductModal ] = useState(false);
-  const [ showEditProductModal, setShowEditProductModal ] = useState(false)
+  const [ showEditProductModal, setShowEditProductModal ] = useState(false);
+  const [ showDeleteProductModal, setShowDeleteProductModal ] = useState(false);
   const { products, getProducts } = useContext(ProductsContext);
 
   useEffect(()=>{
@@ -18,8 +20,12 @@ const AdminProducts = () => {
   }, []);
 
   const openEditModal = () =>{
-    setShowEditProductModal(true)
-  }
+    setShowEditProductModal(true);
+  };
+
+  const openDeleteModal = () =>{
+    setShowDeleteProductModal(true);
+  };
 
   return (
     <>
@@ -49,6 +55,7 @@ const AdminProducts = () => {
           data={product}
           index={index + 1}
           openEditModal={openEditModal}
+          openDeleteModal={openDeleteModal}
            />
           ))}
         </tbody>
@@ -66,6 +73,10 @@ const AdminProducts = () => {
     <EditProductModal
       show={showEditProductModal}
       onHide={()=> setShowEditProductModal(false)} />
+
+    <DeleteProductModal 
+      show={showDeleteProductModal}
+      onHide={()=> setShowDeleteProductModal(false)} />
     
     </>
 
