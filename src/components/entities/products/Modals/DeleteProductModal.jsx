@@ -18,7 +18,7 @@ const DeleteProductModal = ({ show, onHide }) => {
       centered
       className="delete-product-modal"
     >
-      <Modal.Header>
+      <Modal.Header className="delete-product-modal-header">
         <Modal.Title className="delete-product-modal-title">
           ¿Estás seguro que deseas eliminar este producto?
         </Modal.Title>
