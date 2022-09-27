@@ -25,6 +25,7 @@ const AdminUsers = () => {
               <th>Apellido</th>
               <th>Mail</th>
               <th>Rol</th>
+              <th>Acciones</th>
             </tr>
           </thead>
           <tbody>
