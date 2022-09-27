@@ -1,9 +1,9 @@
 import React from 'react';
 import SaleList from '../components/entities/sale/base/SaleList';
-import '../css/entities/sale/sale.css'
+import '../css/entities/sale/sale.css';
 import adidasImg from '../assets/img/adidas.png'
 
-const SalePage = () => {
+const SaleHistoryPage = () => {
     return (
         <>
             <div className='app'>
@@ -22,4 +22,4 @@ const SalePage = () => {
     );
 };
 
-export default SalePage;
+export default SaleHistoryPage;

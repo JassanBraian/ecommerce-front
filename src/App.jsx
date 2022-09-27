@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/common/layout/Layout';
 import authToken from './config/token';
 import Home from './pages/Home';
-import SalePage from './pages/SalePage';
+import SaleHistoryPage from './pages/SaleHistoryPage';
+import SaleNewPage from './pages/SaleNewPage';
 
 const token = localStorage.getItem('token');
 
@@ -22,7 +23,8 @@ function App() {
           <Layout>
             <Routes>
               <Route path='/' element={<Home />} />
-              <Route path='/sale' element={<SalePage />} />
+              <Route path='/sale-history' element={<SaleHistoryPage />} />
+              <Route path='/sale-new' element={<SaleNewPage />} />
             </Routes>
           </Layout>
         </Router>
