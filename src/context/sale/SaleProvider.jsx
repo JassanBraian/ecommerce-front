@@ -7,14 +7,18 @@ import {
     GET_SALES,
     GET_SALES_USER,
     CREATE_SALE,
-    UPDATE_SALE
+    UPDATE_SALE,
+    UPDATE_SALE_NEW,
+    GET_SALE_UNPAID_USER
 } from '../../types/sale';
 
 const SaleProvider = ({ children }) => {
 
     const initialState = {
         sales: [],
-        sale: {}
+        sale: {},
+        salenew: {},
+        saleunpaid: {}
     }
     const [state, dispatch] = useReducer(SaleReducer, initialState);
 
@@ -29,7 +33,7 @@ const SaleProvider = ({ children }) => {
 
     const getSalesByUserId = async userId => {
         try {
-            const res = await clientAxios.get('http://localhost:4000/api/v1/sales/', { params: { userId: userId } });
+            const res = await clientAxios.get('http://localhost:4000/api/v1/sale/', { params: { userId: userId } });
             res && dispatch({ type: GET_SALES_USER, payload: res.data.sales });
         } catch (error) {
             throw error;
@@ -38,7 +42,7 @@ const SaleProvider = ({ children }) => {
 
     const getSale = async saleId => {
         try {
-            const res = await clientAxios.get(`http://localhost:4000/api/v1/sales/${saleId}`);
+            const res = await clientAxios.get(`http://localhost:4000/api/v1/sale/${saleId}`);
             res && dispatch({ type: GET_SALE, payload: res.data.sale });
         } catch (error) {
             throw error;
@@ -63,6 +67,19 @@ const SaleProvider = ({ children }) => {
         }
     }
 
+    const updateSaleNew = async salenew => {
+        dispatch({ type: UPDATE_SALE_NEW, payload: salenew });
+    }
+
+    const getSaleUnpaidByUserId = async userId => {
+        try {
+            const res = await clientAxios.get('http://localhost:4000/api/v1/sale/', { params: { userId: userId } });
+            res && dispatch({ type: GET_SALE_UNPAID_USER, payload: res.data.sale });
+        } catch (error) {
+            throw error;
+        }
+    }
+
     return (
         <SaleContext.Provider value={{
             ...state,
@@ -70,7 +87,9 @@ const SaleProvider = ({ children }) => {
             getSalesByUserId,
             getSale,
             createSale,
-            updateSale
+            updateSale,
+            updateSaleNew,
+            getSaleUnpaidByUserId
         }}>
             {children}
         </SaleContext.Provider>

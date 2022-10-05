@@ -1,18 +1,20 @@
 import { ButtonGroup, Button, Form } from 'react-bootstrap';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Swal from 'sweetalert2';
+import SaleContext from '../../../../context/sale/SaleContext';
 
 const SaleNewTabUbication = ({ setTabActive }) => {
+
+    const { currentSale, updateSaleNew } = useContext(SaleContext);
 
     const initialValue = {
         country: '',
         city: '',
         postalcode: '',
-        street: '',
-        door: ''
+        street: ''
     }
     const [formTabUbi, setFormTabUbi] = useState(initialValue);
-    const { country, city, postalcode, street, door } = formTabUbi;
+    const { country, city, postalcode, street } = formTabUbi;
 
     const [error, setError] = useState([]);
 
@@ -26,7 +28,8 @@ const SaleNewTabUbication = ({ setTabActive }) => {
     const handleOnSubmit = e => {
         e.preventDefault();
 
-        if (country && city && postalcode && street && door) {
+        if (country && city && postalcode && street) {
+            updateSaleNew(formTabUbi);
             setTabActive('payment');
         } else {
             Swal.fire({
@@ -78,16 +81,6 @@ const SaleNewTabUbication = ({ setTabActive }) => {
                         type="text"
                         placeholder="Su calle"
                         value={street}
-                        onChange={handleOnChange}
-                    />
-                </Form.Group>
-                <Form.Group className="mb-3">
-                    <Form.Label>Puerta</Form.Label>
-                    <Form.Control
-                        name="door"
-                        type="text"
-                        placeholder="Su numero de puerta"
-                        value={door}
                         onChange={handleOnChange}
                     />
                 </Form.Group>

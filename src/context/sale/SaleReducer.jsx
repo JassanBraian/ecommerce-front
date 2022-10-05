@@ -3,7 +3,9 @@ import {
     GET_SALES,
     GET_SALES_USER,
     CREATE_SALE,
-    UPDATE_SALE
+    UPDATE_SALE,
+    UPDATE_SALE_NEW,
+    GET_SALE_UNPAID_USER
 } from "../../types/sale";
 
 const SaleReducer = (state, action) => {
@@ -33,6 +35,16 @@ const SaleReducer = (state, action) => {
                 ...state,
                 sales: state.sales.map(sale =>
                     sale._id === action.payload._id ? action.payload : sale),
+            }
+        case UPDATE_SALE_NEW:
+            return {
+                ...state,
+                salenew: action.payload,
+            }
+        case GET_SALE_UNPAID_USER:
+            return {
+                ...state,
+                saleunpaid: action.payload,
             }
         default:
             return state;

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import ProdListGrid from '../../product/card/ProdListGrid';
 import Moment from 'react-moment';
@@ -9,8 +10,11 @@ const SaleCard = ({ sale }) => {
     return (
         <>
             <Card className='saleCard'>
-                <Card.Header
-                    className='headerCard'>Fecha de compra: <Moment format='DD/MM/YYYY'>{createdAt}</Moment>
+                <Card.Header className='headerCard'>
+                    Fecha de compra:
+                    <Moment format='DD/MM/YYYY'>
+                        {createdAt}
+                    </Moment>
                 </Card.Header>
                 <Card.Body className='bodyCard'>
                     <Card.Title className='titleCard'>Lista de productos selecionados:</Card.Title>

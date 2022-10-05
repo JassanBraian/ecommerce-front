@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
 import { Table } from 'react-bootstrap';
+import SaleContext from '../../../../context/sale/SaleContext';
 
 const ProdListGrid = ({ products }) => {
+
     return (
         <>
             <Table bordered hover className='table'>
@@ -15,14 +17,19 @@ const ProdListGrid = ({ products }) => {
                 </thead>
                 <tbody>
                     {
-                        products.map((product, index) => (
-                            <tr key={index}>
-                                <td>{index + 1}</td>
-                                <td>{product.name}</td>
-                                <td>{product.brand}</td>
-                                <td>${product.price}</td>
+                        products ?
+                            products.map((product, index) => (
+                                <tr key={index}>
+                                    <td>{index + 1}</td>
+                                    <td>{product.name}</td>
+                                    <td>{product.brand}</td>
+                                    <td>${product.price}</td>
+                                </tr>
+                            ))
+                            :
+                            <tr>
+                                <td>No posee ningun producto</td>
                             </tr>
-                        ))
                     }
                 </tbody>
             </Table>

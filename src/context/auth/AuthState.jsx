@@ -51,7 +51,6 @@ const AuthState = ({ children }) => {
   const updateUser = async (data) => {
     try {
         const response = await clientAxios.put('http://localhost:4000/api/v1/user', data);
-        console.log(response.data)
         dispatch({type: UPDATE_SUCCESS, payload: response.data.data});
     } catch (error) {
       throw error;
