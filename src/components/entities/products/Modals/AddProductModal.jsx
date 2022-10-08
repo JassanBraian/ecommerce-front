@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useState } from "react";
 import { useContext } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
@@ -13,9 +14,8 @@ const AddProductModal = ({ show, onHide }) => {
     price: 0,
     stock: 0,
     isInOffer: false,
-    category: "",
+    category: "Consolas"
   };
-
   
   const [form, setForm] = useState(initialFormValues);
   const [errorMsg, setErrorMsg] = useState(null);

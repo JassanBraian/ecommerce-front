@@ -18,6 +18,10 @@ const AdminProducts = () => {
     getProducts();
   }, []);
 
+  useEffect(()=>{
+    console.log("productos", products)
+  }, [products])
+
   const openEditModal = () => {
     setShowEditProductModal(true);
   };

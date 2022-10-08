@@ -1,0 +1,78 @@
+/* Main: background-color: #fff
+.#000
+#ff0000
+#4A4A4A
+#D6D6D6 (para footer y botón de talle seleccionado)
+#F4F4F4 (para botones de talles)
+#00A650
+-Verdana (Para textos y títulos pequeños)
+-TT Supermolot Neue (para títulos grandes/medianos) */
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --red: #ff0000;
+    --gray: #4A4A4A;
+    --lightgrey: #D6D6D6;
+    --green: #00A650;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body{
+    background-color: #fff;
+    background-size: 20px 20px;
+    font-family: 'Verdana';
+}
+
+h1, h2 {
+    font-family: 'TT Supermolot';
+}
+
+.app {
+    max-width: 1250px;
+    width: 100%;
+    margin: 100px auto;
+    /* box-shadow: 0 0 5px #ccc; */
+}
+
+.saleCard {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #000;
+}
+
+.headerCard, .footerCard {
+    background-color: var(--lightgrey);
+    font-size: larger;
+}
+
+.footerCard {
+    text-align: center;
+}
+
+.bodyCard .textCard {
+    text-align: center;
+    font-size: larger;
+}
+
+.titleCard {
+    font-size: larger;
+}
+
+.logoAdidas {
+    max-width: 100px;
+    min-width: 100;
+    /* max-width: 30%;
+    max-height: 30%;*/
+} 
+
