@@ -6,7 +6,7 @@ import DeleteProductModal from "../components/entities/products/Modals/DeletePro
 import EditProductModal from "../components/entities/products/Modals/EditProductModal";
 import ProductsList from "../components/entities/products/ProductsList";
 import ProductsContext from "../context/products/ProductsContext";
-import "../css/entities/Products/AdminProducts.css";
+import "../css/entities/products/AdminProducts.css";
 
 const AdminProducts = () => {
   const [showAddProductModal, setShowAddProductModal] = useState(false);

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Button } from "react-bootstrap";
 import ProductsContext from "../../../context/products/ProductsContext";
-import "../../../css/entities/Products/ProductsList.css";
+import "../../../css/entities/products/ProductsList.css";
 
 const ProductsList = ({ data, openEditModal, openDeleteModal }) => {
   const { getProduct } = useContext(ProductsContext);
