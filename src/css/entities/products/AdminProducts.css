@@ -1,0 +1,51 @@
+.admin-products-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.admin-products-title {
+  background-color: rgb(171, 170, 170);
+  width: 14rem;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.admin-products-title h1{
+  font-size: 2rem;
+  color: white;
+}
+
+.admin-products-add-btn{
+  position: absolute;
+  right: 37%;
+  top: 2.3rem;
+}
+
+.admin-products-table{
+  margin-top: 2rem;
+  width: 80% !important;
+  margin-bottom: 0 !important;
+}
+
+.admin-products-table th{
+  background-color: rgb(171, 170, 170) !important;
+  padding: 0.2rem 2.5rem;
+  text-align: center;
+}
+
+.admin-products-table-footer{
+  min-width: 80%;
+  width: auto;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(171, 170, 170);
+  font-weight: bold;
+}
+
+.admin-products-table-footer p{
+  padding-top: 0.8rem;
+}
