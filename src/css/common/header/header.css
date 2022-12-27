@@ -1,0 +1,477 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .profile__top {
+    height: 34px !important;
+    margin: 0px 9px 0px 41px;
+    width: 34px !important;
+  }
+  
+  .header-icon {
+    color: white;
+    width: 60px;
+  }
+  
+  .header__top {
+  
+    background-color: #000;
+  }
+  
+  .header_inner {
+    margin: 0;
+  }
+  
+  .header__top .header_inner .left {
+    display: flex;
+  }
+  
+  .header__top .header_inner .left .iconMenu {
+    /* width: 30px; */
+    cursor: pointer;
+    /*margin-right: 60px;*/
+    align-self: flex-start;
+    padding: 0 20px;
+  }
+  
+  .header__top .header_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+  }
+  
+  .header__top .header_inner .right {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .header__top .header_inner .right button {
+    margin-left: 5px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+    align-self: flex-end;
+    padding: 0 10px;
+    background-color: #000;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+    justify-content: space-between;
+    font-family: 'Poppins' !important;
+    font-weight: bold;
+    border: 3px solid black;
+  }
+  
+  .brand-header {
+    color: #000;
+  }
+  
+  .brand-name {
+    color: black!important;
+  }
+  
+  .brand-header:hover {
+    color: #4A4A4A;
+  }
+  
+  .item-sale {
+    font-weight: bold;
+    color: #ff0000;
+  }
+  
+  .item-sale:hover {
+    color: #ff0000;
+  }
+  
+  .sale {
+    color: red;
+  }
+  
+  .item {
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .item:hover {
+    color: black;
+  }
+  
+  
+  .button {
+    display: inline-block;
+    border-radius: 0px 40px 40px 0px;
+    background-color: #4A4A4A;
+    border: none;
+    color: #FFFFFF;
+    text-align: start;
+    font-size: 10px;
+    padding: 7px 0px 7px 1px;
+    width: 60px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0;
+  }
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    margin-left: 5px;
+  }
+  .button span:after {
+  content: '\00bb';  /* Entidades CSS. Para usar entidades HTML, use &#8594;*/
+  position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -7px;
+    transition: 0.5s;
+  }
+  .button:hover span {
+    padding-right: 25px;
+  }
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
+  .header-main {
+    position: relative;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: #000
+  }
+  
+  .logo {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600
+  }
+  
+  .brand-wrap {
+    text-decoration: none !important
+  }
+  
+  .icon-sm {
+    width: 48px;
+    height: 48px;
+    line-height: 48px !important;
+    font-size: 20px
+  }
+  
+  .widget-header {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative
+  }
+  
+  .navbar-collapse {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .widget-header .notify {
+    position: absolute;
+    top: -3px;
+    right: -10px
+  }
+  
+  .notify {
+    position: absolute;
+    top: -4px;
+    right: -10px;
+    display: inline-block;
+    padding: .25em .6em;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    border-radius: 3rem;
+    color: #fff;
+    background-color: #fa3434
+  }
+  
+  .mr-3,
+  .mx-3 {
+    margin-right: 1rem !important
+  }
+  
+  .search-form {
+    border: 1px solid #ffffff !important
+  }
+  
+  .search-button {
+    color: #007bff;
+    background-color: #ffffff;
+    border-color: #ffffff
+  }
+  
+  .navbar {
+    margin-top: 20px;
+  }
+  
+  .navbar-main {
+    background-color: #fff
+  }
+  
+  .navbar-toggler {
+    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.1) !important;
+    height: 45px;
+  }
+  
+  .navbar-toggler {
+    padding: 4px;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.37rem
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: .5rem 7px 0px;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: .25rem
+  }
+  
+  .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: .45rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url(https://img.icons8.com/ios/50/000000/menu.png)
+  }
+  
+  .nav-link {
+    font-weight: bold;
+    padding: 0px !important;
+    color: black !important;
+  }
+  
+  .vl {
+    border-left: 1px solid #fff;
+    height: 100%
+  }
+  
+  .fas {
+    color: #fff
+  }
+  
+  .login-register {
+    padding: 0px !important;
+  }
+  
+  .login {
+    color: white;
+    font-size: 9px;
+    padding: 0 !important;
+    width: 10px;
+  }
+  
+  .register {
+    color: white;
+    font-size: 9px;
+    padding: 0 !important;
+  }
+  
+  .responsive-search {
+    color: red;
+  }
+  
+  .navbar {
+    margin-top: 5px;
+  }
+  
+  .brandImageName {
+    width: 140px;
+  }
+  
+  @media (min-width: 576px) {
+    .header__top .header_inner .right button {
+      padding: 0px 2px;
+      width: 80px;
+      font-size: 12px;
+    }
+  
+    .header__top .header_inner .left .iconMenu {
+      padding: 0 5px;
+    }
+  
+    .right {
+      display: flex;
+      align-items: center;
+    }
+  
+    .Cart__top img {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .register {
+      font-size: 11px;
+    }
+  
+    .login {
+      font-size: 11px;
+    }
+  
+  .header-icon {
+    width: 65px;
+  }
+  
+  .navbar {
+    margin-top: 5px;
+  }
+  
+  .brandImageName {
+    width: 170px;
+  }
+  }
+  
+  @media (min-width: 768px) {
+    .header__top .header_inner .right button {
+      padding: 0px 3px;
+    }
+  
+    .button {
+      font-size: 13px;
+      padding: 8px 10px 8px;
+      width: 85px;
+    }
+  
+    /* .navbar-collapse {
+      display: flex;
+      justify-content: center;
+    } */
+  
+    .register {
+      font-size: 12px;
+    }
+  
+    .login {
+      font-size: 12px;
+    }
+  
+    .navbar {
+      margin-top: 20px;
+    }
+  
+    .header-icon {
+      width: 80px;
+    }
+  }
+  
+  
+  
+  @media (min-width: 992px) {
+    .header__top .header_inner .right button {
+      padding: 0px 18px;
+    }
+  
+    .navbar {
+      margin-top: 20px;
+    }
+  
+    /* .navbar-collapse {
+      display: flex;
+      justify-content: center;
+    } */
+  }
+  
+  @media (min-width: 1200px) {
+    .header__top .header_inner .right button {
+      padding: 0px 20px;
+    }
+  
+    .button {
+      font-size: 15px;
+      padding: 8px 10px 8px;
+      width: 85px;
+    }
+  
+    /* .navbar-collapse {
+      display: flex;
+      justify-content: center;
+    } */
+  
+    .register {
+      font-size: 15px;
+    }
+  
+    .login {
+      font-size: 15px;
+    }
+  
+    .navbar {
+      margin-top: 20px;
+    }
+  }
+  
+  @media (min-width: 1400px) {
+    .header__top .header_inner .right button {
+      padding: 0px 30px;
+    }
+  
+    .button {
+      font-size: 18px;
+      padding: 8px 10px 8px;
+      width: 100px;
+    }
+  
+    /* .navbar-collapse {
+      display: flex;
+      justify-content: center;
+    } */
+  
+    .register {
+      font-size: 18px;
+    }
+  
+    .login {
+      font-size: 18px;
+    }
+  
+    .profile__top {
+      height: 34px !important;
+      margin: 0px 9px 0px 41px;
+      width: 40px !important;
+    }
+  
+    .navbar {
+      margin-top: 20px;
+    }
+  
+    .brandImageName {
+      width: 210px;
+    }
+  }

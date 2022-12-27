@@ -1,0 +1,158 @@
+
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+.seeMoreButton {
+    background-color: #D3B72A;
+    height: 50px;
+    width: 250px;
+    font-family: 'Pacifico';
+    font-size: 2rem;
+    box-shadow: 10px 10px gray;
+    border-radius: 2px;
+    align-self: flex-end;
+    margin-right: 50px;
+
+}
+
+.publicity-image {
+    margin-top: 80px;
+}
+
+.card-slider-container {
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    /* height: 485px; */
+    height: auto;
+}
+
+.cardd-bottom {
+    font-weight: bold;
+}
+
+.ESTO-PONER-AL-DIV-VACIO {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* div > Slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+} */
+
+
+.slick-slide > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slick-list {
+    margin: 0 -10px;
+}
+
+.slick-prev {
+    left: 2%!important;
+    z-index: +1;
+}
+
+.slick-next {
+    left: 95%;
+    z-index: +1;
+}
+
+.slick-next:before {
+    color: black!important;
+}
+
+.slick-prev:before {
+    color: #000!important;
+}
+
+.cardd {
+    border: 1px solid #fff;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    /* height: 400px; */
+    height: auto;
+    width: 250px!important;
+    color: #000;
+    text-align: center;
+}
+
+.cardd-top h2 {
+    font-size: 1.2rem;
+    padding-top: 8px;
+}
+
+.cardd-top > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 600px) {
+    .seeMoreButton {
+        width: 150px;
+        font-size: 1.5rem;
+        margin-right: 15px;
+    }
+
+    .cardd {
+        width: 250px!important;
+    }
+
+    .card-slider-container {
+        /* height: 485px; */
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .seeMoreButton {
+        width: 120px;
+        font-size: 1rem;
+        margin-right: 10px;
+    }
+
+    .cardd {
+        width: 200px!important;
+        /* height: 330px; */
+        height: auto;
+    }
+
+    .card-slider-container {
+        /* height: 410px; */
+        height: auto;
+    }
+}
+
+.seeMoreButton {
+    background-color: #D3B72A;
+    height: 50px;
+    width: 250px;
+    font-family: 'Pacifico';
+    font-size: 2rem;
+    box-shadow: 10px 10px gray;
+    border-radius: 2px;
+    align-self: flex-end;
+    margin-right: 50px;
+
+}
+
+.seeMoreButton:hover {
+    transform: skew(-5deg);
+
+}

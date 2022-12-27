@@ -1,0 +1,12 @@
+.titulo {
+    font-family: 'Pacifico';
+    font-size: 60px;
+    padding: 0;
+    margin: 0;
+    color: #D3B72A;
+    text-shadow: 4px 4px #9999;
+}
+
+.card-group {
+    margin-top: 30px;
+}

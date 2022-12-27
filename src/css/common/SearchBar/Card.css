@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.card {
+    width: 18rem;
+}
+
+h2 {
+    font-family: 'Pacifico', cursive;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-img-top {
+    height: 100%
+}
+
+.card-title {
+    height: 70px;
+    font-size: 45px;
+}
+
+.card-text {
+    font-size: 20px;
+}
+
+.favBtn {
+    color: black;
+    background-color: #D3B72A;
+    border: none;
+    border-radius: unset;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
