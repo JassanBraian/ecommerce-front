@@ -6,7 +6,7 @@ import DeleteProductModal from "../components/entities/products/Modals/DeletePro
 import EditProductModal from "../components/entities/products/Modals/EditProductModal";
 import ProductsList from "../components/entities/products/ProductsList";
 import ProductsContext from "../context/products/ProductsContext";
-import "../css/entities/products/AdminProducts.css";
+import "../css/entities/Products/AdminProducts.css";
 
 const AdminProducts = () => {
   const [showAddProductModal, setShowAddProductModal] = useState(false);
@@ -35,14 +35,14 @@ const AdminProducts = () => {
       <div className="admin-products-container">
         <div className="admin-products-title">
           <h1>Productos</h1>
+          <Button
+            variant="primary"
+            className="admin-products-add-btn"
+            onClick={() => setShowAddProductModal(true)}
+          >
+            Añadir
+          </Button>
         </div>
-        <Button
-          variant="primary"
-          className="admin-products-add-btn"
-          onClick={() => setShowAddProductModal(true)}
-        >
-          Añadir
-        </Button>
         <Table striped bordered hover className="admin-products-table">
           <thead>
             <tr>

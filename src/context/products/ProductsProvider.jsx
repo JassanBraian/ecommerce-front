@@ -32,7 +32,7 @@ const ProductsProvider = ({ children }) => {
   const addProduct = async product =>{
     try {
       const res = await clientAxios.post('http://localhost:4000/api/v1/product/', product);
-      res && setValues({ ...values, products: res.data.currentProduct });
+      res && setValues({ ...values, products: [...values.products, res.data.product] });
     } catch (error) {
       throw error;
     }
