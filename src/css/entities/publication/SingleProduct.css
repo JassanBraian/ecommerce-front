@@ -1,0 +1,78 @@
+/* .fav-single-pub-btn {
+    margin-top: 15px;
+} */
+
+/* .app {
+    max-width: 1200px;
+    width: 100%;
+    margin: 100px auto;
+    box-shadow: 0 0 5px #ccc;
+} */
+
+.featured .row {
+    display: flex;
+    border: .1rem solid black;
+    border-radius: .5rem;
+    background: #f9f9f9;
+    padding: 0.5rem;
+}
+
+/* .featured .row .content {
+    flex: 1 1 50rem;
+} */
+
+.featured .row .image-container {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.featured .row .image-container .small-image {
+    display: inline-block;
+    width: 20%;
+}
+
+.featured .row .image-container .big-image {
+    width: 86%;
+}
+
+.featured .row .image-container .small-image img {
+    width: 100%;
+    margin: 2px;
+    padding: 1px;
+    cursor: pointer;
+}
+
+.featured .row .image-container .small-image img:hover {
+    background: #000;
+}
+
+.featured .row .image-container .big-image img {
+    width: 100%;
+
+}
+
+.featured .row .content h3 {
+    color:#000;
+    margin-top: 10px;
+}
+
+.featured .row .content p {
+    color: #999;
+    margin-top: 15px;
+}
+
+.featured .row .content .price {
+    color:#000;
+    font-weight: bolder;
+    margin-top: 15px;
+}
+
+.featured .row .content .quota {
+    color:#00A650;
+}
+
+.featured .row .content .price span {
+    color: var(--orange);
+    text-decoration: line-through;
+}

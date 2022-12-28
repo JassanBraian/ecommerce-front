@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body{
+    background-color: #fff;
+    opacity: 1;
+
+    background-size: 20px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.app {
+    max-width: 1250px;
+    width: 100%;
+    margin: 100px auto;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.formCreate {
+    background-color: #D1A12A;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border-radius: 1%;
+    border-color: gray;
+    border-style: solid;
+}
+
+/* .formCreate .btnSave {
+    text-align: center;
+} */
+
+.preview {
+    background-color: #e5e5f7;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border-radius: 1%;
+    border-color: gray;
+    border-style: solid;
+}
+
